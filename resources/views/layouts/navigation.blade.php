@@ -15,9 +15,11 @@
           <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
             {{ __('Dashboard') }}
           </x-nav-link>
-          <x-nav-link>
+          @role('admin')
+          <x-nav-link :href="route('events.index')" :active="request()->routeIs('events.index')">
             {{ __('Event') }}
           </x-nav-link>
+          @endrole
           <x-nav-link>
             {{ __('Transaction') }}
           </x-nav-link>
@@ -25,7 +27,7 @@
       </div>
 
       <!-- Settings Dropdown -->
-      <div class="hidden sm:flex sm:items-center sm:ms-6">
+      <div class=" hidden sm:flex sm:items-center sm:ms-6">
         <x-dropdown align="right" width="48">
           <x-slot name="trigger">
             <button class="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-gray-500 bg-white hover:text-gray-700 focus:outline-none transition ease-in-out duration-150">

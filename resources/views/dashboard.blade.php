@@ -13,6 +13,9 @@
 
           <div class="mt-4">
             {{ Auth::user()->name }}
+            <h2 class="text-gray-600 capitalize">
+              {{ Auth::user()->roles->pluck('name')->first() }}
+            </h2>
 
             <div class="bg-white p-6 rounded shadow-md w-full max-w-sm">
               <form action="#" method="POST">

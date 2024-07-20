@@ -13,6 +13,18 @@
 
           <div class="mt-4">
             {{ Auth::user()->name }}
+
+            <div class="bg-white p-6 rounded shadow-md w-full max-w-sm">
+              <form action="#" method="POST">
+                <div class="mb-4">
+                  <label for="datetime" class="block text-gray-700 text-sm font-bold mb-2">Select Date and Time:</label>
+                  <input type="datetime-local" id="datetime" name="datetime" class="border border-gray-300 rounded py-2 px-3 w-full focus:outline-none focus:ring-2 focus:ring-blue-500">
+                </div>
+                <div class="flex items-center justify-between">
+                  <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:ring-2 focus:ring-blue-500">Submit</button>
+                </div>
+              </form>
+            </div>
           </div>
         </div>
       </div>

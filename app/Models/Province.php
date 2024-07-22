@@ -9,12 +9,7 @@ class Province extends Model
 {
     use HasFactory;
 
-    protected $fillable = [
-        'province_name',
-    ];
-
-    public function event()
-    {
-        return $this->hasOne(Event::class);
+    public function event(){
+        return $this->hasMany(Event::class);
     }
 }

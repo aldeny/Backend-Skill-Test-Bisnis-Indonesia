@@ -9,12 +9,7 @@ class Category extends Model
 {
     use HasFactory;
 
-    protected $fillable = [
-        'category_name',
-    ];
-
-    public function event()
-    {
+    public function event(){
         return $this->hasOne(Event::class);
     }
 }
